@@ -14,12 +14,12 @@
     <!--fullcalendar-->
     <link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet'>
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' rel='stylesheet' />
-    <link href='fullcalendar/core/main.css' rel='stylesheet' />
-    <link href='fullcalendar/daygrid/main.css' rel='stylesheet' />
-    <link href='fullcalendar/bootstrap/main.css' rel='stylesheet' />
-    <script src='fullcalendar/core/main.js'></script>
-    <script src='fullcalendar/daygrid/main.js'></script>
-    <script src='fullcalendar/bootstrap/main.js'></script>
+    <link href='static/fullcalendar/packages/core/main.css' rel='stylesheet' />
+    <link href='static/fullcalendar/packages/daygrid/main.css' rel='stylesheet' />
+    <link href='static/fullcalendar/packages/bootstrap/main.css' rel='stylesheet' />
+    <script src='static/fullcalendar/packages/core/main.js'></script>
+    <script src='static/fullcalendar/packages/daygrid/main.js'></script>
+    <script src='static/fullcalendar/packages/bootstrap/main.js'></script>
 
 
 
@@ -61,7 +61,7 @@
                     <a class="nav-link" href="#">MiEvent <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Create MiEvent</a>
+                    <a class="nav-link" href="/">Create MiEvent</a>
                 </li>
             </ul>
 
@@ -69,22 +69,25 @@
     </nav>
 
     <!--calendar-->
-    <div id='calendar' class='col-md-8'></div>
-
+    <div class = 'container col-md-12'>
+        <div id='calendar' class='col-md-12'></div>
+    </div>
     </body>
     <style>
-    html, body {
+    .container {
+        position: absolute;
         margin: 0;
         padding: 0;
         font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     #calendar {
         max-width: 900px;
         margin: 40px auto;
+
     }
-</style>
+    </style>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
