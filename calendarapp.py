@@ -17,11 +17,11 @@ def index():
 @app.route('/data')
 def data():
     return Response(json.dumps(events),  mimetype='application/json')
-    
+
 
 @app.route('/calendar')
 def calendar():
-    
+
     return render_template('calendar.html')
 
 @app.route('/create', methods = ['GET', 'POST'])
@@ -38,5 +38,3 @@ def create():
     else:
         return render_template('create.html')
 
-if __name__ == '__main__':
-    app.run(debug=True)
