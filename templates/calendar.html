@@ -35,18 +35,19 @@
             var calendarEl = document.getElementById('calendar');
             var calendar = new FullCalendar.Calendar(calendarEl, {
             plugins: [ 'dayGrid', 'timeGrid', 'bootstrap', 'interaction' ],
-            defaultView: 'dayGridMonth',
-            selectable: true,
+            eventClick: function(info) {
+                window.location.href="/event/"+info.event.id;
+            },
+            navLinks: true,
             timeZone: 'UTC',
             themeSystem: 'bootstrap',
             views: {
-            dayGridMonth: { buttonText: 'calendar table' },
-            timeGridWeek: { buttonText: 'day grid week' },
+            dayGridMonth: { buttonText: 'Back' }
             },
             header: {
                 left: 'prev,next today',
                 center: 'title',
-                right: 'dayGridMonth,timeGridWeek'
+                right: 'dayGridMonth'
             },
             weekNumbers: true,
             eventLimit: true, // allow "more" link when too many events
@@ -54,6 +55,7 @@
             dateClick: function(info) {
                 views:'timeGridWeek';
             }
+
         });
         calendar.render();
      });
