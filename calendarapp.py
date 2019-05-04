@@ -48,7 +48,14 @@ class Event(db.Model):
 '''main routing logic'''
 @app.route('/')
 def index():
-    return redirect(url_for('calendar'))
+    return redirect(url_for('login'))
+
+@app.route('/login', mnethods = ['GET', 'POST']):
+    def login():
+        if request.method == 'GET':
+            return render_template('login.html')
+        else:
+            pass
 
 @app.route ('/event/<int:event_id>')
 def event(event_id):
