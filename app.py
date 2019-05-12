@@ -18,10 +18,10 @@ login_manager.init_app(app)
 
 '''Adding configuration for database'''
 SQLALCHEMY_DATABASE_URI = "mysql+mysqlconnector://{username}:{password}@{hostname}/{databasename}".format(
-    username="mikekitckchan",
-    password="Fong1029$",
-    hostname="mikekitckchan.mysql.pythonanywhere-services.com",
-    databasename="mikekitckchan$calendar",
+    username="",
+    password="",
+    hostname="",
+    databasename="",
 )
 app.config["SQLALCHEMY_DATABASE_URI"] = SQLALCHEMY_DATABASE_URI
 app.config["SQLALCHEMY_POOL_RECYCLE"] = 299
